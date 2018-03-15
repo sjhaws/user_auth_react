@@ -1,4 +1,4 @@
-import {creatStore, compose, applyMiddleware} from "redux"
+import {createStore, compose, applyMiddleware} from "redux"
 import {thunk} from 'redux-thunk'
 import rootReducer from "./reducers/index"
 
@@ -7,7 +7,7 @@ const enhancers = compose(
   window.devToolExtension ? window.devToolExtension() : f => f
 )
 
-const store = creatStore(rootReducer, {}, enhancers)
+const store = createStore(rootReducer, {}, enhancers)
 
 if(module){
   module.hot.accept("./reducers/", () => {

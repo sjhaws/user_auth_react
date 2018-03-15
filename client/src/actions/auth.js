@@ -1,5 +1,5 @@
 import axios from "axios"
-import setAuthHeaders from "../utils/auth"
+import {setAuthHeaders} from "../util/auth"
 
 export const handleRegistration = (email, password, passwordConfirmation, history) => {
   return(dispatch) => {
